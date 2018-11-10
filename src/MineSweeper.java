@@ -47,6 +47,7 @@ public class MineSweeper extends JFrame {
     }
 
     private void initFrame() {
+        //comment
         pack();
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setTitle("Mine Sweeper");
