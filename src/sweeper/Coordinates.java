@@ -9,4 +9,13 @@ public class Coordinates {
         this.x = x;
         this.y = y;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Coordinates){
+            Coordinates to = (Coordinates) obj;
+            return  to.x == x && to.y == y;
+        }
+        return super.equals(obj);
+    }
 }
