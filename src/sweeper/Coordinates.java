@@ -12,9 +12,9 @@ public class Coordinates {
 
     @Override
     public boolean equals(Object obj) {
-        if (obj instanceof Coordinates){
+        if (obj instanceof Coordinates) {
             Coordinates to = (Coordinates) obj;
-            return  to.x == x && to.y == y;
+            return to.x == x && to.y == y;
         }
         return super.equals(obj);
     }

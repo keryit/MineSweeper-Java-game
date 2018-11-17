@@ -21,9 +21,9 @@ class Bomb {
         return bombMatrix.getMatrixArr(coord);
     }
 
-    private void fixBombCount(){
+    private void fixBombCount() {
         int maxBomb = Ranges.getSize().x * Ranges.getSize().y / 2;
-        if (totalBomb > maxBomb){
+        if (totalBomb > maxBomb) {
             totalBomb = maxBomb;
         }
     }
@@ -46,5 +46,9 @@ class Bomb {
                 bombMatrix.setMatrixArr(around, bombMatrix.getMatrixArr(around).getNextNumberBox());
             }
         }
+    }
+
+    public int getTotalBombs() {
+        return totalBomb;
     }
 }

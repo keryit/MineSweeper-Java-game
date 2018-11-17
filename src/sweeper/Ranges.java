@@ -32,18 +32,18 @@ public class Ranges {
                 coord.y >= 0 && coord.y < size.y;
     }
 
-    static Coordinates getRandomCoord(){
+    static Coordinates getRandomCoord() {
         return new Coordinates(random.nextInt(size.x),
-                               random.nextInt(size.y));
+                random.nextInt(size.y));
     }
 
-    static ArrayList<Coordinates> getCoordAround(Coordinates coord){
+    static ArrayList<Coordinates> getCoordAround(Coordinates coord) {
         Coordinates around;
         ArrayList<Coordinates> list = new ArrayList<>();
-        for (int x = coord.x -1; x <= coord.x + 1; x++){
-            for (int y = coord.y -1; y <= coord.y +1; y++){
-                if (inRange(around = new Coordinates(x, y))){
-                    if (!around.equals(coord)){
+        for (int x = coord.x - 1; x <= coord.x + 1; x++) {
+            for (int y = coord.y - 1; y <= coord.y + 1; y++) {
+                if (inRange(around = new Coordinates(x, y))) {
+                    if (!around.equals(coord)) {
                         list.add(around);
                     }
                 }
